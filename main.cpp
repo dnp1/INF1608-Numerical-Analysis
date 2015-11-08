@@ -10,15 +10,19 @@
 
 using namespace scan;
 using namespace std;
-using helper::LoadFileToCtScan;
+
+
 
 
 
 int main(void)
 {
-    CtScan* ct = new CtScan(256,256,99);
-    LoadFileToCtScan("resources/head-8bit.raw", *ct, false);
+    const double L = 255;
+
+    CtScan* ct = new CtScan(256, 256, 99);
+    helper::LoadFileToCtScan("resources/head-8bit.raw", *ct);
+
     //Array<int, ThreeIndexes>* labels = new Array<int>(10,20);
-    cout << "Hello, World!" << endl;
+
     return 0;
 }

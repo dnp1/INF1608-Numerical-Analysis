@@ -7,9 +7,10 @@
 
 #ifndef INF1608_NUMERICAL_ANALYSIS_HELPER_H
 #define INF1608_NUMERICAL_ANALYSIS_HELPER_H
+
 using scan::CtScan;
 
 namespace helper{
-    void LoadFileToCtScan(std::string fileName, CtScan &ct, bool print);
+    void LoadFileToCtScan(std::string fileName, CtScan &ct);
 }
 #endif //INF1608_NUMERICAL_ANALYSIS_HELPER_H
