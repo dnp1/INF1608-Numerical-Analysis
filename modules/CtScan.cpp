@@ -4,8 +4,6 @@
 
 #include <malloc.h>
 #include <assert.h>
-#include <iostream>
-#include <fstream>
 
 #include "CtScan.h"
 
@@ -31,19 +29,22 @@ namespace scan
     }
 
 
-#define access_assert(i,j,k) assert(k < nZ &&  j < nY && i < nX)
-#define calc_index(i,j,k) k * nX * nY + j * nX + i
+#define access_assert(i, j, k) assert((k < nZ &&  j < nY && i < nX))
+#define calc_index(i, j, k) k * nX * nY + j * nX + i
+
     /** **/
-    void CtScan::set(unsigned int i, unsigned int j, unsigned int k,  unsigned char value)
+    void CtScan::set(unsigned int i, unsigned int j, unsigned int k, unsigned char value)
     {
-        access_assert(i,j,k);
-        data[calc_index(i,j,k)] = value;
+        access_assert(i, j, k);
+        this->data[calc_index(i, j, k)] = value;
     }
 
     unsigned char CtScan::get(unsigned int i, unsigned int j, unsigned int k) const
     {
-        access_assert(i,j,k);
-        return data[calc_index(i,j,k)];
+
+       access_assert(i, j, k);
+
+        return this->data[calc_index(i, j, k)];
     }
 
     unsigned int CtScan::getNX() const

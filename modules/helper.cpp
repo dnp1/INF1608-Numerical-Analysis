@@ -2,7 +2,6 @@
 // Created by danilo on 08/11/15.
 //
 #include "helper.h"
-#include <string>
 #include <fstream>
 #include <iostream>
 #include <string.h>
@@ -24,7 +23,6 @@ namespace helper
             return;
         }
 
-        cout << ct.getSizeInBytes() << endl;
         file.read((char*) ct.getReferenceToData(), ct.getSizeInBytes());
 
         if (file.fail()) {

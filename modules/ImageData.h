@@ -12,7 +12,7 @@ namespace image {
     class ImageData
     {
     private:
-        int maxValue = 1;
+        int maxValue = -1;
         unsigned int nX;
         unsigned int nY;
         unsigned char* data = nullptr;
@@ -22,9 +22,10 @@ namespace image {
     public:
         ImageData(unsigned int x, unsigned int y);
         ~ImageData();
+        unsigned int getNX() const;
+        unsigned int getNY() const;
         unsigned char getPixel(unsigned int i, unsigned int j);
         void setPixel(unsigned int i, unsigned int j, unsigned char value);
-
         void setMaxValue(int maxValue);
         int getMaxValue();
 

@@ -8,7 +8,6 @@
 
 namespace image
 {
-
     image::ImageData::ImageData(unsigned int x, unsigned int y)
     {
         size_t numberOfMembers;
@@ -53,7 +52,7 @@ namespace image
 
     int ImageData::discoverMaxValue()
     {
-        int               max;
+        int               max = -1;
         for (unsigned int i = 0; i < nX * nY; i++) {
             if (data[i] > max) {
                 max = data[i];
@@ -83,19 +82,29 @@ namespace image
             cerr << "File could not be opened!" << endl;
             return;
         }
-
-        file << nY << " " << nX << endl;
-        file << getMaxValue() << endl;
+        file << "P2" << endl;
+        file << nX << " " << nY << endl;
+        file << getMaxValue();
 
 
         for (unsigned int i = 0; i < nX * nY; i++) {
-            if (i % nY == 0) {
+            if (i % nX == 0) {
                 file << endl;
             }
-            file << data[i];
+            file << (unsigned int) data[i] << " ";
         }
 
         file.close();
+    }
+
+    unsigned int ImageData::getNX() const
+    {
+        return nX;
+    }
+
+    unsigned int ImageData::getNY() const
+    {
+        return nY;
     }
 }
 
