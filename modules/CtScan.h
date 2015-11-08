@@ -26,6 +26,8 @@ namespace scan
         unsigned int getNX() const ;
         unsigned int getNY() const ;
         unsigned int getNZ() const ;
+        unsigned int getSizeInBytes() const;
+        unsigned char* getReferenceToData() const ; //Unsafe!!!!! you can do anything with a pointer!
 
     };
 }

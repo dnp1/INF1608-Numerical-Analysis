@@ -65,5 +65,13 @@ namespace scan
 #undef calc_index
 
 
+    unsigned int CtScan::getSizeInBytes() const
+    {
+        return getNX() * getNZ() * getNY();
+    }
 
+    unsigned char* CtScan::getReferenceToData() const
+    {
+        return data;
+    }
 }

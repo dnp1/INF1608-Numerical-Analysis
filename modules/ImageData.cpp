@@ -46,7 +46,6 @@ namespace image
     void image::ImageData::setMaxValue(int maxValue)
     {
         this->maxValue = maxValue;
-
     }
 
 
