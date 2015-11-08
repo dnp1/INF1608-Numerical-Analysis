@@ -40,7 +40,7 @@ namespace scan
         data[calc_index(i,j,k)] = value;
     }
 
-    unsigned char CtScan::get(unsigned int i, unsigned int j, unsigned int k)
+    unsigned char CtScan::get(unsigned int i, unsigned int j, unsigned int k) const
     {
         access_assert(i,j,k);
         return data[calc_index(i,j,k)];

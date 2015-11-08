@@ -20,7 +20,7 @@ namespace scan
     public:
         CtScan(unsigned int x, unsigned int y, unsigned int z);
         ~CtScan();
-        unsigned char get(unsigned int i, unsigned int j, unsigned int k);
+        unsigned char get(unsigned int i, unsigned int j, unsigned int k) const;
         void set(unsigned int i, unsigned int j, unsigned int k, unsigned char value);
         // CtScan& loadFromFile(std::string fileName);
         unsigned int getNX() const ;
