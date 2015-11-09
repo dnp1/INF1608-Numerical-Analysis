@@ -4,8 +4,6 @@
 #include "helper.h"
 #include <fstream>
 #include <iostream>
-#include <string.h>
-#include "CtScan.h"
 
 using namespace std;
 using scan::CtScan;

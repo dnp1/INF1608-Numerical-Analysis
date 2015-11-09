@@ -42,7 +42,7 @@ namespace scan
     unsigned char CtScan::get(unsigned int i, unsigned int j, unsigned int k) const
     {
 
-       access_assert(i, j, k);
+        access_assert(i, j, k);
 
         return this->data[calc_index(i, j, k)];
     }

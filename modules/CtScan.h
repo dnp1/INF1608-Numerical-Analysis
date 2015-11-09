@@ -13,21 +13,29 @@ namespace scan
     {
     private:
         unsigned char* data = nullptr;
-        unsigned int nX       = 0;
-        unsigned int nY       = 0;
-        unsigned int nZ       = 0;
+        unsigned int nX = 0;
+        unsigned int nY = 0;
+        unsigned int nZ = 0;
 
     public:
         CtScan(unsigned int x, unsigned int y, unsigned int z);
+
         ~CtScan();
+
         unsigned char get(unsigned int i, unsigned int j, unsigned int k) const;
-        void set(unsigned int i, unsigned int j, unsigned int k, unsigned char value);
+
+        void          set(unsigned int i, unsigned int j, unsigned int k, unsigned char value);
+
         // CtScan& loadFromFile(std::string fileName);
-        unsigned int getNX() const ;
-        unsigned int getNY() const ;
-        unsigned int getNZ() const ;
-        unsigned int getSizeInBytes() const;
-        unsigned char* getReferenceToData() const ; //Unsafe!!!!! you can do anything with a pointer!
+        unsigned int  getNX() const;
+
+        unsigned int  getNY() const;
+
+        unsigned int  getNZ() const;
+
+        unsigned int  getSizeInBytes() const;
+
+        unsigned char* getReferenceToData() const; //Unsafe!!!!! you can do anything with a pointer!
 
     };
 }

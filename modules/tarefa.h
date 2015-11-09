@@ -7,7 +7,8 @@
 #ifndef INF1608_NUMERICAL_ANALYSIS_TASK_H
 #define INF1608_NUMERICAL_ANALYSIS_TASK_H
 
-namespace task {
-    void task(scan::CtScan &ct, image::ImageData &img);
+namespace tarefa
+{
+    void PerformTask(scan::CtScan &ct, image::ImageData &img);
 }
 #endif //INF1608_NUMERICAL_ANALYSIS_TASK_H

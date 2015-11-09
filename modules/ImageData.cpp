@@ -44,16 +44,11 @@ namespace image
 #undef access_assert
 #undef calc_index
 
-    void image::ImageData::setMaxValue(int maxValue)
-    {
-        this->maxValue = maxValue;
-    }
-
 
     int ImageData::discoverMaxValue()
     {
         int               max = -1;
-        for (unsigned int i = 0; i < nX * nY; i++) {
+        for (unsigned int i   = 0; i < nX * nY; i++) {
             if (data[i] > max) {
                 max = data[i];
             }

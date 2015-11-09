@@ -10,7 +10,8 @@
 
 using scan::CtScan;
 
-namespace helper{
+namespace helper
+{
     void LoadFileToCtScan(std::string fileName, CtScan &ct);
 }
 #endif //INF1608_NUMERICAL_ANALYSIS_HELPER_H
