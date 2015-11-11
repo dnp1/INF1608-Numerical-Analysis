@@ -24,16 +24,16 @@ namespace scan
 
         unsigned char get(unsigned int i, unsigned int j, unsigned int k) const;
 
-        void          set(unsigned int i, unsigned int j, unsigned int k, unsigned char value);
+        void set(unsigned int i, unsigned int j, unsigned int k, unsigned char value);
 
         // CtScan& loadFromFile(std::string fileName);
-        unsigned int  getNX() const;
+        unsigned int getNX() const;
 
-        unsigned int  getNY() const;
+        unsigned int getNY() const;
 
-        unsigned int  getNZ() const;
+        unsigned int getNZ() const;
 
-        unsigned int  getSizeInBytes() const;
+        unsigned int getSizeInBytes() const;
 
         unsigned char* getReferenceToData() const; //Unsafe!!!!! you can do anything with a pointer!
 

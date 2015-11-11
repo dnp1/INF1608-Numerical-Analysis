@@ -26,13 +26,13 @@ namespace image
 
         ~ImageData();
 
-        unsigned int  getNX() const;
+        unsigned int getNX() const;
 
-        unsigned int  getNY() const;
+        unsigned int getNY() const;
 
         unsigned char getPixel(unsigned int i, unsigned int j);
 
-        void          setPixel(unsigned int i, unsigned int j, unsigned char value);
+        void setPixel(unsigned int i, unsigned int j, unsigned char value);
 
         int getMaxValue();
 
