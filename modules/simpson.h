@@ -6,8 +6,8 @@
 
 #ifndef INF1608_NUMERICAL_ANALYSIS_SIMPSON_H
 #define INF1608_NUMERICAL_ANALYSIS_SIMPSON_H
-namespace numerical_integration
-{
+
+namespace numerical_integration {
     using std::function;
 
     double CompositeSimpson(double leftBound, double rightBound, unsigned int numberOfSteps,
@@ -17,6 +17,6 @@ namespace numerical_integration
 
     double DoubleSimpson(double leftBound, double rightBound, function<double(double x)> (f));
 
-    double AdaptativeSimpson(double a, double b, function<double(double x)> (f), double tol)
+    double AdaptativeSimpson(double a, double b, function<double(double x)> (f), double tol);
 }
 #endif //INF1608_NUMERICAL_ANALYSIS_SIMPSON_H
